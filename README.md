@@ -2,53 +2,58 @@
 Get your module up and running quickly.
 
 Find and replace all on all files (CMD+SHIFT+F):
-- Name: My Module
-- Package name: my-module
-- Description: My new Nuxt module
+- Name: Varlet Module
+- Package name: Varlet Module
+- Description: Varlet Module
 -->
 
-# My Module
+# Varlet Nuxt (WIP)
 
-[![npm version][npm-version-src]][npm-version-href]
+Welcome to contribute this repo
+
+<!-- [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
-[![Nuxt][nuxt-src]][nuxt-href]
+[![Nuxt][nuxt-src]][nuxt-href] -->
 
-My new Nuxt module for doing amazing things.
+Varlet Module for Nuxt3
 
-- [✨ &nbsp;Release Notes](/CHANGELOG.md)
+<!-- - [✨ &nbsp;Release Notes](/CHANGELOG.md) -->
 <!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/my-module?file=playground%2Fapp.vue) -->
 <!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+- Automatically import directives.
+- Automatically import of showDialog, showToast and other methods components.
+
 
 ## Quick Setup
 
-1. Add `my-module` dependency to your project
+1. Add `varlet-nuxt` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D my-module
+pnpm add -D varlet-nuxt
 
 # Using yarn
-yarn add --dev my-module
+yarn add --dev varlet-nuxt
 
 # Using npm
-npm install --save-dev my-module
+npm install --save-dev varlet-nuxt
 ```
 
-2. Add `my-module` to the `modules` section of `nuxt.config.ts`
+2. Add `varlet-nuxt` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({
   modules: [
-    'my-module'
-  ]
+    'varlet-nuxt'
+  ],
+  varlet: {
+    ...
+  }
 })
 ```
 
@@ -81,7 +86,7 @@ npm run release
 ```
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/my-module/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+<!-- [npm-version-src]: https://img.shields.io/npm/v/my-module/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
 [npm-version-href]: https://npmjs.com/package/my-module
 
 [npm-downloads-src]: https://img.shields.io/npm/dm/my-module.svg?style=flat&colorA=18181B&colorB=28CF8D
@@ -91,4 +96,4 @@ npm run release
 [license-href]: https://npmjs.com/package/my-module
 
 [nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
-[nuxt-href]: https://nuxt.com
+[nuxt-href]: https://nuxt.com -->
