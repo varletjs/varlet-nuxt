@@ -1,10 +1,10 @@
 import { addComponent } from '@nuxt/kit'
 import { kebabCase } from '@varlet/shared'
 
-import { moduleName } from '../config'
+import { moduleName, functionComponents } from '../config'
 import { ModuleOptions } from '../types'
 
-export function resolveComponents (config: ModuleOptions) {
+export function resolveComponents(config: ModuleOptions) {
   const { components } = config
 
   components.forEach((item) => {
@@ -12,7 +12,7 @@ export function resolveComponents (config: ModuleOptions) {
 
     const filePath =
       !from || from === moduleName
-        ? `@${moduleName}/ui/es/${kebabCase(name)}/${name}`
+        ? `${moduleName}/es/${kebabCase(name)}/index`
         : from
 
     addComponent({
@@ -22,11 +22,15 @@ export function resolveComponents (config: ModuleOptions) {
   })
 }
 
-export function resolveStyles (config: ModuleOptions, name: string) {
+export function resolveStyles(config: ModuleOptions, name: string) {
   const { components } = config
 
+  if (functionComponents.includes(name)) {
+    return `${moduleName}/es/${kebabCase(name)}/style`
+  }
+
   if (/^Var[A-Z]/.test(name) && components.includes(name.slice(3))) {
-    return `@${moduleName.toLocaleLowerCase()}/ui/es/${kebabCase(name.slice(3))}/style`
+    return `${moduleName}/es/${kebabCase(name.slice(3))}/style`
   }
 
   return undefined

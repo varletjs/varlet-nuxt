@@ -1,12 +1,29 @@
 import * as varletComponents from '@varlet/ui'
 
-import type { ModuleOptions } from './types'
+import type { ModuleOptions, PresetDirectives, PresetImport } from './types'
 
-export const moduleName = 'varlet'
+export const moduleName = '@varlet/ui'
 
 export const components = Object.keys(varletComponents).filter(key =>
   /^[A-Z][A-Za-z]*[^_][A-Za-z]*$/.test(key)
 )
+
+export const functionComponents: string[] = [
+  'Snackbar',
+  'ActionSheet',
+  'Dialog',
+  'LoadingBar'
+]
+
+const allDirectives: PresetDirectives = {
+  Ripple: ['ripple', 'VRipple'],
+  Lazy: ['lazy', 'VLazy'],
+  Hover: ['hover', 'VHover']
+}
+
+const allComponents: PresetImport[] = [
+  ...functionComponents
+]
 
 const defaultInclude: RegExp[] = [
   /\.vue$/,
@@ -26,5 +43,6 @@ export const defaults: ModuleOptions = {
   components,
   include: defaultInclude,
   exclude: defaultExclude,
-  imports: []
+  imports: allComponents,
+  directives: allDirectives
 }
