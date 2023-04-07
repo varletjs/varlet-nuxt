@@ -17,7 +17,8 @@ export function resolveComponents(config: ModuleOptions) {
 
     addComponent({
       name: alias || `Var${name}`,
-      filePath
+      filePath,
+      export: `_${name}Component`
     })
   })
 }
