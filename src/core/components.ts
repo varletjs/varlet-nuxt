@@ -4,7 +4,7 @@ import { kebabCase } from '@varlet/shared'
 import { moduleName, functionComponents } from '../config'
 import { ModuleOptions } from '../types'
 
-export function resolveComponents(config: ModuleOptions) {
+export function resolveComponents (config: ModuleOptions) {
   const { components } = config
 
   components.forEach((item) => {
@@ -23,7 +23,7 @@ export function resolveComponents(config: ModuleOptions) {
   })
 }
 
-export function resolveStyles(config: ModuleOptions, name: string) {
+export function resolveStyles (config: ModuleOptions, name: string) {
   const { components } = config
 
   if (functionComponents.includes(name)) {

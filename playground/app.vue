@@ -10,14 +10,20 @@ const show = ref(false)
 </script>
 
 <template>
-  <var-button type="primary" block @click="show = !show">基本使用</var-button>
-  <var-snackbar v-model:show="show">
-    这是一个消息条！！
-  </var-snackbar>
-  <div v-ripple class="ripple-example-block">点击</div>
-  <var-skeleton :loading="show">
-    加载的数据
-  </var-skeleton>
+  <div>
+    <var-button type="primary" block @click="show = !show">
+      基本使用
+    </var-button>
+    <var-snackbar v-model:show="show">
+      这是一个消息条！！
+    </var-snackbar>
+    <div v-ripple class="ripple-example-block">
+      点击
+    </div>
+    <var-skeleton :loading="show">
+      加载的数据
+    </var-skeleton>
+  </div>
 </template>
 
 <style>

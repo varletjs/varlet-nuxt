@@ -2,7 +2,7 @@ import { kebabCase } from '@varlet/shared'
 import { moduleName } from '../config'
 import type { ModuleOptions } from '../types'
 
-export function resolveDirectives(
+export function resolveDirectives (
   config: ModuleOptions,
   name: string
 ): undefined | [name: string, styles?: string] {

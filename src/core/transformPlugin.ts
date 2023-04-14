@@ -24,7 +24,7 @@ export const transformPlugin = createUnplugin((options: PluginOptions) => {
   return {
     name: `${moduleName}:transform`,
     enforce: 'post',
-    transformInclude(id) {
+    transformInclude (id) {
       if (exclude.some(pattern => id.match(pattern))) {
         return false
       }
@@ -32,7 +32,7 @@ export const transformPlugin = createUnplugin((options: PluginOptions) => {
         return true
       }
     },
-    transform(code, id) {
+    transform (code, id) {
       const imports = new Set<string>()
       const directives: PresetImport[] = []
       const s = new MagicString(code)
