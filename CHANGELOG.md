@@ -1,7 +1,5 @@
-# Changelog
 
-
-## v1.1.0
+## v0.0.2
 
 
 ### 🚀 Enhancements
@@ -14,6 +12,7 @@
 
   - Update readme ([b3028ed](https://github.com/varletjs/varlet-nuxt/commit/b3028ed))
   - Directive debugger ([873f52c](https://github.com/varletjs/varlet-nuxt/commit/873f52c))
+  - **release:** V1.1.0 ([de56b8b](https://github.com/varletjs/varlet-nuxt/commit/de56b8b))
 
 ### ❤️  Contributors
 
