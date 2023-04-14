@@ -1,6 +1,6 @@
 {
   "name": "@varlet/nuxt",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "varlet module for nuxt",
   "license": "MIT",
   "type": "module",

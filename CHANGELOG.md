@@ -1,4 +1,17 @@
 
+## v0.0.3
+
+[compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.0.2...v0.0.3)
+
+
+### 🏡 Chore
+
+  - Update the readme ([f643334](https://github.com/varletjs/varlet-nuxt/commit/f643334))
+
+### ❤️  Contributors
+
+- Zhangmo8 ([@zhangmo8](http://github.com/zhangmo8))
+
 ## v0.0.2
 
 
