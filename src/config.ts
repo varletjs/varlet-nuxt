@@ -12,7 +12,10 @@ export const functionComponents: string[] = [
   'Snackbar',
   'ActionSheet',
   'Dialog',
-  'LoadingBar'
+  'LoadingBar',
+  'ImagePreview',
+  'StyleProvider',
+  'Picker'
 ]
 
 const allDirectives: PresetDirectives = {

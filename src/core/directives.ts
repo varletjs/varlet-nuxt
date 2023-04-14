@@ -11,7 +11,7 @@ export function resolveDirectives (
   if (directives[name]) {
     const [directive, styleName] = Array.isArray(directives[name]) ? directives[name] : [directives[name]] as any
     if (styleName) {
-      return [directive, `${moduleName}/es/${kebabCase(name)}/style`]
+      return [directive, `${moduleName}/es/${kebabCase(name)}/style/index`]
     }
 
     return [directive, styleName]
