@@ -1,6 +1,6 @@
 {
   "name": "@varlet/nuxt",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "varlet module for nuxt",
   "license": "MIT",
   "type": "module",
@@ -23,16 +23,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/varletjs/varlet.git"
+    "url": "git+https://github.com/varletjs/varlet-nuxt.git"
   },
-  "bugs": "https://github.com/varletjs/varlet/issues",
+  "bugs": "https://github.com/varletjs/varlet-nuxt/issues",
   "scripts": {
     "prepack": "nuxt-module-build",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "build": "npm run dev:prepare && nuxt-module-build",
-    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "gen": "npx changelogen --release",
+    "release": "npm run lint && npm run build && npx changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint . --fix"
   },
   "husky": {
