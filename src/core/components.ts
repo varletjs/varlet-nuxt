@@ -27,11 +27,11 @@ export function resolveStyles (config: ModuleOptions, name: string) {
   const { components } = config
 
   if (functionComponents.includes(name)) {
-    return `${moduleName}/es/${kebabCase(name)}/style`
+    return `${moduleName}/es/${kebabCase(name)}/style/index`
   }
 
   if (/^Var[A-Z]/.test(name) && components.includes(name.slice(3))) {
-    return `${moduleName}/es/${kebabCase(name.slice(3))}/style`
+    return `${moduleName}/es/${kebabCase(name.slice(3))}/style/index`
   }
 
   return undefined
