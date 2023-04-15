@@ -10,7 +10,7 @@ export default defineNuxtModule<ModuleOptions>({
     configKey: moduleName
   },
   defaults,
-  setup (_options: ModuleOptions, nuxt) {
+  setup(_options: ModuleOptions, nuxt) {
     const _configs = _options
     resolveOptions()
 
@@ -28,9 +28,24 @@ export default defineNuxtModule<ModuleOptions>({
           sourcemap: nuxt.options.sourcemap[mode],
           transformStyles: name => resolveStyles(_configs, name),
           transformDirectives: name => resolveDirectives(_configs, name)
-
         })
       )
+    })
+
+    nuxt.hook('webpack:config', (configs) => {
+      configs.forEach((config) => {
+        const mode = config.name === 'client' ? 'client' : 'server'
+
+        config.plugins.push(
+          transformPlugin.webpack({
+            include: _configs.include,
+            exclude: _configs.exclude,
+            sourcemap: nuxt.options.sourcemap[mode],
+            transformStyles: name => resolveStyles(_configs, name),
+            transformDirectives: name => resolveDirectives(_configs, name)
+          })
+        )
+      })
     })
   }
 })
