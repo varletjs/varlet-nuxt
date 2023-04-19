@@ -10,7 +10,7 @@ export default defineNuxtModule<ModuleOptions>({
     configKey: moduleName
   },
   defaults,
-  setup(_options: ModuleOptions, nuxt) {
+  setup (_options: ModuleOptions, nuxt) {
     const _configs = _options
     resolveOptions()
 
