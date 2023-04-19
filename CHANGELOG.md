@@ -1,4 +1,24 @@
 
+## v0.0.4
+
+[compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.0.3...v0.0.4)
+
+
+### 🚀 Enhancements
+
+  - Supports the webpack plugin ([10be091](https://github.com/varletjs/varlet-nuxt/commit/10be091))
+  - Follow the automatic import configuration ([1dc4f19](https://github.com/varletjs/varlet-nuxt/commit/1dc4f19))
+
+### 🩹 Fixes
+
+  - Complete the mission function components and replace pnpm 7.x to 8.x ([#2](https://github.com/varletjs/varlet-nuxt/pull/2))
+
+### ❤️  Contributors
+
+- Zhangmo8 ([@zhangmo8](http://github.com/zhangmo8))
+- Wegi8 <18272190626@163.com>
+- Haoziqaq ([@haoziqaq](http://github.com/haoziqaq))
+
 ## v0.0.3
 
 [compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.0.2...v0.0.3)
