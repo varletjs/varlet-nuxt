@@ -16,6 +16,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     nuxt.options.imports.autoImport !== false && resolveImports(_configs)
     nuxt.options.components !== false && resolveComponents(_configs)
+    nuxt.options.imports.autoImport !== false && resolveImports(_configs)
 
     nuxt.hook('vite:extendConfig', (config, { isClient }) => {
       const mode = isClient ? 'client' : 'server'
