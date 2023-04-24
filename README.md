@@ -1,4 +1,4 @@
-# Varlet Nuxt
+# Varlet Nuxt(Under rectification and reform 🚧)
 
 Welcome to contribute this repo
 
