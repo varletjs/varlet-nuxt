@@ -1,50 +1,64 @@
-import { defineNuxtModule } from '@nuxt/kit'
+import { join } from 'node:path'
+import { addComponentsDir, addImportsDir, defineNuxtModule } from '@nuxt/kit'
+import { Nuxt } from '@nuxt/schema'
+import { createUnplugin } from 'unplugin'
+import MagicString from 'magic-string'
+import { kebabCase } from "@varlet/shared";
 
 import type { ModuleOptions } from './types'
-import { defaults, moduleName } from './config'
-import { resolveOptions, resolveComponents, resolveStyles, resolveDirectives, resolveImports, transformPlugin } from './core'
+import { moduleName, nameSpace } from './config'
+import { getComponents } from './utils'
+
+const packageRegExp = /node_modules\/@varlet\/ui\/es/g
+// const packageRegExp = /node_modules\/@varlet\/ui\/es\/[a-z]+(|-[a-z]+){1,3}/g
+const CMD = process.cwd()
+
+const transformPathPlugin = createUnplugin(() => {
+  return {
+    name: `${moduleName}:transform`,
+    enforce: 'post',
+    transform(_code, id) {
+      const code = new MagicString(_code)
+
+      code.replace(packageRegExp, (packageStr, ...args) => {
+        console.log('code', code.toString().includes('6666'), packageStr.toString());
+        return moduleName
+      })
+
+      return {
+        code: code.toString()
+      }
+    }
+  }
+})
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: moduleName,
     configKey: moduleName
   },
-  defaults,
-  setup (_options: ModuleOptions, nuxt) {
-    const _configs = _options
-    resolveOptions()
+  setup(_options: ModuleOptions, nuxt: Nuxt) {
+    nuxt.options.build.transpile.push(moduleName)
 
-    nuxt.options.imports.autoImport !== false && resolveImports(_configs)
-    nuxt.options.components !== false && resolveComponents(_configs)
+    addImportsDir(getComponents().map((item) => {
+      return (join(CMD, `/node_modules/${moduleName}/es/${kebabCase(item)}/style`))
+    }))
+
+    addComponentsDir({
+      path: join(CMD, `/node_modules/${moduleName}/es`),
+      prefix: nameSpace,
+      pathPrefix: true,
+      extensions: ['js', 'vue', 'ts', 'mjs']
+    })
 
     nuxt.hook('vite:extendConfig', (config, { isClient }) => {
-      const mode = isClient ? 'client' : 'server'
-
       config.plugins = config.plugins || []
-      config.plugins.push(
-        transformPlugin.vite({
-          include: _configs.include,
-          exclude: _configs.exclude,
-          sourcemap: nuxt.options.sourcemap[mode],
-          transformStyles: name => resolveStyles(_configs, name),
-          transformDirectives: name => resolveDirectives(_configs, name)
-        })
-      )
+      config.plugins.push(transformPathPlugin.vite())
     })
 
     nuxt.hook('webpack:config', (configs) => {
       configs.forEach((config) => {
-        const mode = config.name === 'client' ? 'client' : 'server'
-
-        config.plugins.push(
-          transformPlugin.webpack({
-            include: _configs.include,
-            exclude: _configs.exclude,
-            sourcemap: nuxt.options.sourcemap[mode],
-            transformStyles: name => resolveStyles(_configs, name),
-            transformDirectives: name => resolveDirectives(_configs, name)
-          })
-        )
+        config.plugins.push(transformPathPlugin.webpack())
       })
     })
   }

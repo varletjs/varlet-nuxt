@@ -1,12 +1,8 @@
 import * as varletComponents from '@varlet/ui'
 
-import type { ModuleOptions, PresetDirectives, PresetImport } from './types'
-
 export const moduleName = '@varlet/ui'
 
-export const components = Object.keys(varletComponents).filter(key =>
-  /^[A-Z][A-Za-z]*[^_][A-Za-z]*$/.test(key)
-)
+export const nameSpace = 'var'
 
 export const functionComponents: string[] = [
   'Snackbar',
@@ -18,13 +14,13 @@ export const functionComponents: string[] = [
   'Picker'
 ]
 
-const allDirectives: PresetDirectives = {
+const allDirectives = {
   Ripple: ['ripple', 'VRipple'],
   Lazy: ['lazy', 'VLazy'],
   Hover: ['hover', 'VHover']
 }
 
-const allComponents: PresetImport[] = [
+const allComponents = [
   ...functionComponents
 ]
 
@@ -40,12 +36,3 @@ const defaultExclude: RegExp[] = [
   /[\\/]\.git[\\/]/,
   /[\\/]\.nuxt[\\/]/
 ]
-
-export const defaults: ModuleOptions = {
-  lazyLoad: false,
-  components,
-  include: defaultInclude,
-  exclude: defaultExclude,
-  imports: allComponents,
-  directives: allDirectives
-}
