@@ -53,6 +53,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.3.2",
+    "knitwork": "^1.0.0",
     "magic-string": "^0.29.0",
     "unplugin": "^1.0.1"
   },

@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const show = ref(false)
 
-// const showSnackBar = () => {
-//   Snackbar({
-//     content: '这是一个消息条!!',
-//     duration: 1000
-//   })
-// }
+const showSnackBar = () => {
+  Snackbar({
+    content: '这是一个消息条!!',
+    duration: 1000
+  })
+}
 </script>
 
 <template>
@@ -14,18 +14,20 @@ const show = ref(false)
     <var-button type="primary" block @click="show = !show">
       66666666
     </var-button>
-    <varButton type="primary" block @click="show = !show">
-      基本使用22
-    </varButton>
-    <!-- <var-snackbar v-model:show="show">
-      这是一个消息条！！
-    </var-snackbar> -->
+    <var-button @click="showSnackBar">
+      wudi
+    </var-button>
+    <client-only>
+      <var-snackbar v-model:show="show">
+        这是一个消息条！！
+      </var-snackbar>
+    </client-only>
     <!-- <div v-ripple class="ripple-example-block">
       点击
     </div> -->
-    <!-- <var-skeleton :loading="show">
+    <var-skeleton :loading="show">
       加载的数据
-    </var-skeleton> -->
+    </var-skeleton>
   </div>
 </template>
 
