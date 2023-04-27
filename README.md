@@ -1,6 +1,6 @@
 # Varlet Nuxt
 
-🌟 Inspired by [vant-nuxt](https://github.com/vant-ui/vant-nuxt) and [element-plus](https://github.com/element-plus/element-plus-nuxt)
+🌟 Inspired by [vant-nuxt](https://github.com/vant-ui/vant-nuxt) and [element-plus-nuxt](https://github.com/element-plus/element-plus-nuxt)
 
 Welcome to contribute this repo
 
@@ -11,7 +11,7 @@ Varlet Module for Nuxt3
 - Make up the Lazy Option
 - Component Demo for Playground
 - Template for Nuxt3
-- Migrate to [knitwork](https://github.com/unjs/knitwork)
+- Supports the directive
 
 ## Quick Setup
 
