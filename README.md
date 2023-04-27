@@ -1,4 +1,6 @@
-# Varlet Nuxt(Under rectification and reform 🚧)
+# Varlet Nuxt
+
+🌟 Inspired by [vant-nuxt](https://github.com/vant-ui/vant-nuxt) and [element-plus](https://github.com/element-plus/element-plus-nuxt)
 
 Welcome to contribute this repo
 
