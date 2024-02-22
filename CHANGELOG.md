@@ -1,4 +1,28 @@
 
+## v0.0.5
+
+[compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.0.4...v0.0.5)
+
+
+### 🚀 Enhancements
+
+  - Support the function component ([06d0f27](https://github.com/varletjs/varlet-nuxt/commit/06d0f27))
+  - Supports directive & lazy load component ([afd6516](https://github.com/varletjs/varlet-nuxt/commit/afd6516))
+
+### 💅 Refactors
+
+  - The component import ([e5f9fd2](https://github.com/varletjs/varlet-nuxt/commit/e5f9fd2))
+
+### 🏡 Chore
+
+  - Remove unuse code ([a9deb42](https://github.com/varletjs/varlet-nuxt/commit/a9deb42))
+  - **deps-dev:** Bump semver from 5.7.1 to 5.7.2 ([#6](https://github.com/varletjs/varlet-nuxt/pull/6))
+
+### ❤️  Contributors
+
+- Zhangmo8 ([@zhangmo8](http://github.com/zhangmo8))
+- Xiaomo ([@zhangmo8](http://github.com/zhangmo8))
+
 ## v0.0.4
 
 [compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.0.3...v0.0.4)
