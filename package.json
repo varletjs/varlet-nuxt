@@ -1,7 +1,7 @@
 {
   "name": "@varlet/nuxt",
   "type": "module",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "packageManager": "pnpm@7.22.0",
   "description": "varlet module for nuxt",
   "license": "MIT",
@@ -34,7 +34,7 @@
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "build": "npm run dev:prepare && nuxt-module-build",
     "gen": "npx changelogen --release",
-    "release": "npm run lint && npm run build && npx changelogen --release && npm publish && git push --follow-tags",
+    "release": "npm run build && npx changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint . --fix"
   },
   "peerDependencies": {

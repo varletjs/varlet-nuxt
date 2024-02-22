@@ -1,4 +1,17 @@
 
+## v0.0.6
+
+[compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.0.5...v0.0.6)
+
+
+### 🚀 Enhancements
+
+  - Make up the functional component ([6f2e3fd](https://github.com/varletjs/varlet-nuxt/commit/6f2e3fd))
+
+### ❤️  Contributors
+
+- Zhangmo8 ([@zhangmo8](http://github.com/zhangmo8))
+
 ## v0.0.5
 
 [compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.0.4...v0.0.5)
