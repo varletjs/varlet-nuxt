@@ -38,8 +38,8 @@
     "lint": "eslint . --fix"
   },
   "peerDependencies": {
-    "@varlet/shared": "^2.9.3",
-    "@varlet/ui": "^2.9.3"
+    "@varlet/shared": "latest",
+    "@varlet/ui": "latest"
   },
   "dependencies": {
     "@nuxt/kit": "^3.3.2",

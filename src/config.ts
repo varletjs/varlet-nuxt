@@ -3,11 +3,14 @@ export const moduleName = '@varlet/ui'
 export const nameSpace = 'var'
 
 export const functional: string[] = [
+  'ImagePreview',
   'Snackbar',
+  'Picker',
   'ActionSheet',
   'Dialog',
-  'Picker',
+  'Locale',
   'StyleProvider',
+  'LoadingBar',
 ]
 
 export const directives = ['ripple', 'lazy', 'hover']

@@ -4,7 +4,7 @@ import type { Nuxt } from '@nuxt/schema'
 import { createUnplugin } from 'unplugin'
 import MagicString from 'magic-string'
 import { genImport } from 'knitwork'
-import { bigCamelize, kebabCase } from '@varlet/shared'
+import { bigCamelize } from '@varlet/shared'
 
 import type { ModuleOptions } from './types'
 import { directives, excludeDiretries, functional, moduleName, nameSpace } from './config'
