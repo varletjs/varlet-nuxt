@@ -1,4 +1,7 @@
 {
+  "name": "my-module-playground",
   "private": true,
-  "name": "my-module-playground"
+  "dependencies": {
+    "@varlet/touch-emulator": "^3.0.3"
+  }
 }

@@ -2,12 +2,14 @@ export const moduleName = '@varlet/ui'
 
 export const nameSpace = 'var'
 
-export const functionComponents: string[] = [
-  'SnackBar'
+export const functional: string[] = [
+  'Snackbar',
+  'ActionSheet',
+  'Dialog',
+  'Picker',
+  'StyleProvider',
 ]
 
-const allDirectives = {
-  Ripple: ['ripple', 'VRipple'],
-  Lazy: ['lazy', 'VLazy'],
-  Hover: ['hover', 'VHover']
-}
+export const directives = ['ripple', 'lazy', 'hover']
+
+export const excludeDiretries = ['.nuxt', 'node_modules']

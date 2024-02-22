@@ -1,0 +1,16 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  '@varlet/touch-emulator':
+    specifier: ^3.0.3
+    version: 3.0.3
+
+packages:
+
+  /@varlet/touch-emulator@3.0.3:
+    resolution: {integrity: sha512-egVFgA0829qYO0ykaz4PlwpLEUuXEuQmb3rd6C2QtWbSwSM9xoxOjCCwlcxZbTySOGs3llXEPN6O3IwwHLOQRA==}
+    dev: false

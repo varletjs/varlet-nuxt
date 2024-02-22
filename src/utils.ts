@@ -1,11 +1,7 @@
-import * as varletComponents from '@varlet/ui'
+import { kebabCase } from '@varlet/shared'
+import { genImport } from 'knitwork'
+import { moduleName } from './config'
 
-export function getComponents() {
-  return Object.keys(varletComponents).filter((key) => {
-    return /^([A-Z]{1}[a-z]+){1,3}$/.test(key)
-  })
+export function genStylePath(dirName: string) {
+  return genImport(`${moduleName}/es/${kebabCase(dirName)}/style`)
 }
-
-export const getFunctionComponentsRegExps = (): RegExp[] => ([
-  /Snackbar(\.|[\\.\\[|(])/
-])
