@@ -8,10 +8,10 @@ Varlet Module for Nuxt3
 
 ## Future
 
-- Make up the Lazy Option
+- [x] ~~Make up the Lazy Option~~
 - Component Demo for Playground
-- Template for Nuxt3
-- Supports the directive
+- [x] ~~Template for Nuxt3~~
+- [x] ~~Supports the directive~~
 
 ## Quick Setup
 
@@ -19,15 +19,12 @@ Varlet Module for Nuxt3
 
 ```bash
 # Using pnpm
-pnpm add -D @varlet/ui
 pnpm add -D @varlet/nuxt
 
 # Using yarn
-yarn add --dev @varlet/ui
 yarn add --dev @varlet/nuxt
 
 # Using npm
-npm install --save-dev @varlet/ui
 npm install --save-dev @varlet/nuxt
 ```
 
@@ -45,6 +42,8 @@ export default defineNuxtConfig({
 ```
 
 That's it! You can now use Varlet Module in your Nuxt app ✨
+
+tips: If you running `varlet` on the PC. Please install [`@varlet/touch-emulator`](https://varlet.gitee.io/varlet-ui/#/zh-CN/browserAdaptation)
 
 ## Contribution
 
