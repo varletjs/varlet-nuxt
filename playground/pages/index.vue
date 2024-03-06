@@ -1,56 +1,92 @@
 <script setup lang="ts">
-import { Themes } from '@varlet/ui'
+definePageMeta({
+  layout: false
+})
 
-const show = ref(false)
-const active = ref(0)
+const router = useRouter()
 
-function showSnackBar() {
-  Snackbar({
-    content: '这是一个消息条!!',
-    duration: 1000,
-  })
+const components = [
+  "style-provider",
+  "button",
+  "fab",
+  "breadcrumbs",
+  "link",
+  "cell",
+  "icon",
+  "image",
+  "avatar",
+  "loading",
+  "chip",
+  "badge",
+  "ellipsis",
+  "paper",
+  "styles",
+  "skeleton",
+  "collapse",
+  "collapse-transition",
+  "space",
+  "row",
+  "sticky",
+  "progress",
+  "list",
+  "swipe",
+  "steps",
+  "image-preview",
+  "card",
+  "result",
+  "divider",
+  "table",
+  "watermark",
+  "tabs",
+  "index-bar",
+  "app-bar",
+  "bottom-navigation",
+  "ripple",
+  "lazy",
+  "hover",
+  "drag",
+  "snackbar",
+  "action-sheet",
+  "floating-panel",
+  "dialog",
+  "pull-refresh",
+  "overlay",
+  "popup",
+  "pagination",
+  "menu",
+  "menu-select",
+  "tooltip",
+  "back-top",
+  "loading-bar",
+  "countdown",
+  "picker",
+  "date-picker",
+  "time-picker",
+  "form",
+  "input",
+  "select",
+  "radio-group",
+  "checkbox-group",
+  "counter",
+  "switch",
+  "slider",
+  "rate",
+  "uploader"
+]
+
+function onNavigationTo(routeName: string) {
+  router.push({ path: `/component/${routeName}` })
 }
 </script>
 
 <template>
-  <div>
-    <var-app-bar title="标题" />
-    <VarButton>wefwef</VarButton>
-    <nuxt-link to="/demo">
-      link to demo qwef
-    </nuxt-link>
-
-    <var-button text round>
-      <var-icon text-6 name="palette" />
-    </var-button>
-
-    <var-button block @click="() => StyleProvider(Themes.md3Light)">
-      Material Design 3 暗色
-    </var-button>
-    <var-button type="primary" block @click="show = !show">
-      66666666
-    </var-button>
-    <var-button @click="showSnackBar">
-      wudi
-    </var-button>
-    <client-only>
-      <var-snackbar v-model:show="show">
-        这是一个消息条！！
-      </var-snackbar>
-    </client-only>
-    <div v-ripple class="ripple-example-block">
-      点击
-    </div>
-    <var-skeleton :loading="show">
-      加载的数据
-    </var-skeleton>
-    <var-bottom-navigation v-model:active="active">
-      <var-bottom-navigation-item label="标签" icon="home" />
-      <var-bottom-navigation-item label="标签" icon="magnify" />
-      <var-bottom-navigation-item label="标签" icon="heart" />
-      <var-bottom-navigation-item label="标签" icon="account-circle" />
-    </var-bottom-navigation>
-  </div>
+  <var-app-bar title="首页" />
+  <var-cell v-for="item in components" :key="item" ripple icon="fire" @click="onNavigationTo(item)">
+    {{ item }}
+    <template #extra>
+      <var-icon name="information" />
+    </template>
+  </var-cell>
 </template>
 
 <style>
