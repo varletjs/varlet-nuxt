@@ -1,4 +1,21 @@
 
+## v0.0.7
+
+[compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.0.6...v0.0.7)
+
+
+### 🩹 Fixes
+
+  - Component style lost fixed ([9089b0f](https://github.com/varletjs/varlet-nuxt/commit/9089b0f))
+
+### 🏡 Chore
+
+  - **release:** V0.0.6 ([2a42e48](https://github.com/varletjs/varlet-nuxt/commit/2a42e48))
+
+### ❤️  Contributors
+
+- Zhangmo8 ([@zhangmo8](http://github.com/zhangmo8))
+
 ## v0.0.6
 
 [compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.0.5...v0.0.6)
