@@ -2,6 +2,7 @@
 import { Themes } from '@varlet/ui'
 
 const show = ref(false)
+const active = ref(0)
 
 function showSnackBar() {
   Snackbar({
@@ -13,10 +14,15 @@ function showSnackBar() {
 
 <template>
   <div>
+    <var-app-bar title="标题" />
     <VarButton>wefwef</VarButton>
     <nuxt-link to="/demo">
       link to demo qwef
     </nuxt-link>
+
+    <var-button text round>
+      <var-icon text-6 name="palette" />
+    </var-button>
 
     <var-button block @click="() => StyleProvider(Themes.md3Light)">
       Material Design 3 暗色
@@ -38,6 +44,12 @@ function showSnackBar() {
     <var-skeleton :loading="show">
       加载的数据
     </var-skeleton>
+    <var-bottom-navigation v-model:active="active">
+      <var-bottom-navigation-item label="标签" icon="home" />
+      <var-bottom-navigation-item label="标签" icon="magnify" />
+      <var-bottom-navigation-item label="标签" icon="heart" />
+      <var-bottom-navigation-item label="标签" icon="account-circle" />
+    </var-bottom-navigation>
   </div>
 </template>
 

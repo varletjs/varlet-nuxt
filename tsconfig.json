@@ -2,6 +2,7 @@
   "extends": "./playground/.nuxt/tsconfig.json",
 
   "compilerOptions": {
+    "moduleResolution": "node",
     "skipLibCheck": true
   }
 }

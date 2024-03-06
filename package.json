@@ -37,10 +37,6 @@
     "release": "npm run build && npx changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint . --fix"
   },
-  "peerDependencies": {
-    "@varlet/shared": "latest",
-    "@varlet/ui": "latest"
-  },
   "dependencies": {
     "@nuxt/kit": "^3.3.2",
     "knitwork": "^1.0.0",
@@ -54,7 +50,6 @@
     "@nuxt/schema": "^3.3.2",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@types/node": "^18.13.0",
-    "@varlet/shared": "latest",
     "@varlet/ui": "latest",
     "eslint": "^8.46.0",
     "husky": "^8.0.3",
