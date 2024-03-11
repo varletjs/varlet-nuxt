@@ -1,0 +1,7 @@
+<script setup>
+import { Dialog } from '@varlet/ui'
+</script>
+
+<template>
+  <var-button type="primary" block @click="Dialog('兰亭临帖 行书如行云流水')">基本使用</var-button>
+</template>
