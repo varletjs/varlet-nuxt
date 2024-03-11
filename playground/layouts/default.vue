@@ -3,7 +3,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <var-app-bar :title="String(route.name) || ''">
+  <var-app-bar class="bar" :title="String(route.name) || ''">
     <template #left>
       <var-button @click="$router.back()" color="transparent" text-color="#fff" round text>
         <var-icon name="chevron-left" :size="24" />
@@ -12,3 +12,9 @@ const route = useRoute()
   </var-app-bar>
   <slot />
 </template>
+
+<style>
+.bar {
+  margin-bottom: 18px;
+}
+</style>
