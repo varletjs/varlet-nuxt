@@ -65,6 +65,7 @@ const transformPathPlugin = createUnplugin(() => {
       if (code.hasChanged()) {
         return {
           code: code.toString(),
+          map: code.generateMap({ source: moduleName, includeContent: true }),
         }
       }
     },

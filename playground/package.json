@@ -1,6 +1,13 @@
 {
   "name": "my-module-playground",
   "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --host --port=8888",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
   "dependencies": {
     "@varlet/touch-emulator": "^3.0.3"
   }
