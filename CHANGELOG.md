@@ -1,4 +1,20 @@
 
+## v0.0.10
+
+[compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.0.9...v0.0.10)
+
+### 🩹 Fixes
+
+- Fix the path in dev ([2f8a036](https://github.com/varletjs/varlet-nuxt/commit/2f8a036))
+
+### 🏡 Chore
+
+- **release:** V0.0.9 ([c3476ac](https://github.com/varletjs/varlet-nuxt/commit/c3476ac))
+
+### ❤️ Contributors
+
+- Zhangmo8 ([@zhangmo8](http://github.com/zhangmo8))
+
 ## v0.0.9
 
 [compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.0.7...v0.0.9)
