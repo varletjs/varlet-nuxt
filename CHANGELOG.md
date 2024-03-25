@@ -1,4 +1,28 @@
 
+## v0.0.9
+
+[compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.0.7...v0.0.9)
+
+
+### 🚀 Enhancements
+
+  - Add button demo ([#11](https://github.com/varletjs/varlet-nuxt/pull/11))
+  - Add all varlet demo ([#13](https://github.com/varletjs/varlet-nuxt/pull/13))
+  - Processing path for lays ([577df5d](https://github.com/varletjs/varlet-nuxt/commit/577df5d))
+
+### 🩹 Fixes
+
+  - Fix the build sourcemap warning ([3c7f1c4](https://github.com/varletjs/varlet-nuxt/commit/3c7f1c4))
+
+### 🏡 Chore
+
+  - Update readme & dependencie ([b27b907](https://github.com/varletjs/varlet-nuxt/commit/b27b907))
+
+### ❤️  Contributors
+
+- Zhangmo8 ([@zhangmo8](http://github.com/zhangmo8))
+- Phil ([@lq-c](http://github.com/lq-c))
+
 ## v0.0.7
 
 [compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.0.6...v0.0.7)
