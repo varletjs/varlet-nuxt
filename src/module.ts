@@ -1,5 +1,4 @@
-import { join } from 'node:path'
-import { addComponentsDir, addImports, defineNuxtModule } from '@nuxt/kit'
+import { addComponentsDir, addImports, createResolver, defineNuxtModule } from '@nuxt/kit'
 import type { Nuxt } from '@nuxt/schema'
 import { createUnplugin } from 'unplugin'
 import MagicString from 'magic-string'
@@ -14,9 +13,8 @@ const functionComponentReg = new RegExp(functional.join('|'), 'g')
 
 const directiveReg = new RegExp(`_resolveDirective\\(\\"(${directives.join('|')})\\"\\)`, 'g')
 
-// eslint-disable-next-line node/prefer-global/process
-const CMD = process.cwd()
-const relativePath = join(CMD, `node_modules/${moduleName}`)
+const { resolve } = createResolver(import.meta.url)
+const relativePath = resolve(`../node_modules/${moduleName}`)
 
 function matchComponentName(componentStr: string): string {
   const componentName = componentStr.replace(/_component_(v|V)ar(|_)+/, '').replaceAll('_', '-')
