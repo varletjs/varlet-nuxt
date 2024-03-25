@@ -1,3 +1,4 @@
+import { cwd } from 'node:process'
 import { addComponentsDir, addImports, createResolver, defineNuxtModule } from '@nuxt/kit'
 import type { Nuxt } from '@nuxt/schema'
 import { createUnplugin } from 'unplugin'
@@ -13,8 +14,9 @@ const functionComponentReg = new RegExp(functional.join('|'), 'g')
 
 const directiveReg = new RegExp(`_resolveDirective\\(\\"(${directives.join('|')})\\"\\)`, 'g')
 
+const CMD = cwd()
 const { resolve } = createResolver(import.meta.url)
-const relativePath = resolve(`../node_modules/${moduleName}`)
+const relativePath = resolve(CMD, `node_modules/${moduleName}`)
 
 function matchComponentName(componentStr: string): string {
   const componentName = componentStr.replace(/_component_(v|V)ar(|_)+/, '').replaceAll('_', '-')
