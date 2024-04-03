@@ -1,8 +1,6 @@
 export interface ModuleOptions {
-  autoImport: boolean
-  lazyLoad?: boolean
-  include?: RegExp[]
-  exclude?: RegExp[]
+  modulePath?: string
+  exclude?: string[]
 }
 
 declare module '@nuxt/schema' {

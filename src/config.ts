@@ -15,4 +15,4 @@ export const functional: string[] = [
 
 export const directives = ['ripple', 'lazy', 'hover']
 
-export const excludeDiretries = ['.nuxt', 'node_modules']
+export const excludeFolders = ['.nuxt', 'node_modules']

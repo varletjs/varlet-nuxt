@@ -6,7 +6,7 @@ import MagicString from 'magic-string'
 import { genImport } from 'knitwork'
 
 import type { ModuleOptions } from './types'
-import { directives, excludeDiretries, functional, moduleName, nameSpace } from './config'
+import { directives, excludeFolders, functional, moduleName, nameSpace } from './config'
 import { genStylePath, pascalCase } from './utils'
 
 const componentReg = /_component_(v|V)ar([A-z]|_)+ /g
@@ -23,12 +23,14 @@ function matchComponentName(componentStr: string): string {
   return componentName.trim()
 }
 
-const transformPathPlugin = createUnplugin(() => {
+const transformPathPlugin = createUnplugin<ModuleOptions>((pluginOptions) => {
+  const { exclude = [] } = pluginOptions
+
   return {
     name: `${moduleName}:transform`,
     enforce: 'post',
     transformInclude(id) {
-      return !excludeDiretries.some(entry => id.includes(entry))
+      return ![...excludeFolders, ...exclude].some(entry => id.includes(entry))
     },
     transform(_code) {
       const code: MagicString = new MagicString(_code)
@@ -83,7 +85,7 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.build.transpile.push(moduleName)
 
     addComponentsDir({
-      path: `${relativePath}/es`,
+      path: `${_options?.modulePath || relativePath}/es`,
       prefix: nameSpace,
       pathPrefix: true,
       extensions: ['js', 'vue', 'ts', 'mjs'],
@@ -103,12 +105,12 @@ export default defineNuxtModule<ModuleOptions>({
 
     nuxt.hook('vite:extendConfig', (config) => {
       config.plugins = config.plugins || []
-      config.plugins.push(transformPathPlugin.vite())
+      config.plugins.push(transformPathPlugin.vite(_options))
     })
 
     nuxt.hook('webpack:config', (configs) => {
       configs.forEach((config) => {
-        config.plugins.push(transformPathPlugin.webpack())
+        config.plugins.push(transformPathPlugin.webpack(_options))
       })
     })
   },
