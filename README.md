@@ -18,14 +18,7 @@ Varlet Module for Nuxt3
 1. Add `@varlet/nuxt` dependency to your project
 
 ```bash
-# Using pnpm
-pnpm add -D @varlet/nuxt
-
-# Using yarn
-yarn add --dev @varlet/nuxt
-
-# Using npm
-npm install --save-dev @varlet/nuxt
+npx nuxi@latest module add varlet
 ```
 
 2. Add `@varlet/nuxt` to the `modules` section of `nuxt.config.ts`
