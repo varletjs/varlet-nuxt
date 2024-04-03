@@ -1,7 +1,7 @@
 {
   "name": "@varlet/nuxt",
   "type": "module",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "packageManager": "pnpm@7.22.0",
   "description": "varlet module for nuxt",
   "license": "MIT",
@@ -36,6 +36,9 @@
     "gen": "npx changelogen --release",
     "release": "npm run build && npx changelogen --release && npm publish && git push --follow-tags",
     "lint": "eslint . --fix"
+  },
+  "peerDependencies": {
+    "@varlet/ui": "latest"
   },
   "dependencies": {
     "@nuxt/kit": "^3.3.2",

@@ -6,12 +6,12 @@ Welcome to contribute this repo
 
 Varlet Module for Nuxt3
 
-## Future
+## Feature
 
-- [x] ~~Make up the Lazy Option~~
-- Component Demo for Playground
-- [x] ~~Template for Nuxt3~~
-- [x] ~~Supports the directive~~
+- Auto import Varlet component in you Nuxt Project
+- Auto import Varlet the directive
+- Lazy load component
+- Material Design Nuxt Component with Material 3 Version
 
 ## Quick Setup
 
@@ -36,14 +36,22 @@ export default defineNuxtConfig({
     '@varlet/nuxt'
   ],
   varlet: {
-    ...
-  }
+    modulePath: '...',
+    exclude: ['...']
+  },
 })
 ```
 
 That's it! You can now use Varlet Module in your Nuxt app ✨
 
 tips: If you running `varlet` on the PC. Please install [`@varlet/touch-emulator`](https://varlet.gitee.io/varlet-ui/#/zh-CN/browserAdaptation)
+
+### Options
+
+|fieldName|require|default|effect|
+|--|--|--|--|
+|modulePath|false|undefind|customer you workspace path if you want|
+|exclude|false|'.nuxt', 'node_modules'|exclude some path that you won't transform|
 
 ## Contribution
 
