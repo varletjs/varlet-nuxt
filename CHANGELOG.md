@@ -1,4 +1,22 @@
 
+## v0.1.1
+
+[compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.0.10...v0.1.1)
+
+
+### 🚀 Enhancements
+
+  - Support customer module path & rename excludeConfig ([2c03c31](https://github.com/varletjs/varlet-nuxt/commit/2c03c31))
+
+### 🏡 Chore
+
+  - **release:** V0.0.10 ([ae4c94e](https://github.com/varletjs/varlet-nuxt/commit/ae4c94e))
+  - Update readme ([56c379b](https://github.com/varletjs/varlet-nuxt/commit/56c379b))
+
+### ❤️  Contributors
+
+- Zhangmo8 ([@zhangmo8](http://github.com/zhangmo8))
+
 ## v0.0.10
 
 [compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.0.9...v0.0.10)
