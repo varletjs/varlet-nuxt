@@ -1,4 +1,17 @@
 
+## v0.1.2
+
+[compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.1.1...v0.1.2)
+
+
+### 📖 Documentation
+
+  - Use new `nuxi module add` command in installation ([#16](https://github.com/varletjs/varlet-nuxt/pull/16))
+
+### ❤️  Contributors
+
+- Daniel Roe ([@danielroe](http://github.com/danielroe))
+
 ## v0.1.1
 
 [compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.0.10...v0.1.1)
