@@ -1,7 +1,5 @@
 <script setup>
-import { ActionSheet, Snackbar } from '@varlet/ui'
-
-async function createBasic () {
+async function createBasic() {
   const action = await ActionSheet({
     actions: [
       {
@@ -16,7 +14,7 @@ async function createBasic () {
         name: 'Item 03',
         icon: 'wifi',
       },
-    ]
+    ],
   })
 
   action !== 'close' && Snackbar(`您选择的是:${action.name}`)
@@ -24,5 +22,7 @@ async function createBasic () {
 </script>
 
 <template>
-  <var-button type="primary" block @click="createBasic">基本使用</var-button>
+  <var-button type="primary" block @click="createBasic">
+    基本使用
+  </var-button>
 </template>

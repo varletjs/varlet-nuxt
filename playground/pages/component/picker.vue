@@ -1,7 +1,5 @@
 <script setup>
-import { Picker, Snackbar } from '@varlet/ui'
-
-async function picker () {
+async function picker() {
   // eslint-disable-next-line unused-imports/no-unused-vars
   const { state, values, indexes, options } = await Picker({
     columns: [
@@ -10,10 +8,10 @@ async function picker () {
         { text: 'B' },
         { text: 'C' },
         { text: 'D' },
-        { text: 'E' }
-      ]
+        { text: 'E' },
+      ],
     ],
-    onChange (values, indexes) {
+    onChange(values, indexes) {
       Snackbar(`values: ${values.toString()}, indexes: ${indexes.toString()}`)
     },
   })
@@ -21,5 +19,7 @@ async function picker () {
 </script>
 
 <template>
-  <var-button type="primary" block @click="picker">单列选择</var-button>
+  <var-button type="primary" block @click="picker">
+    单列选择
+  </var-button>
 </template>

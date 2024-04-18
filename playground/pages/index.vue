@@ -1,77 +1,77 @@
 <script setup lang="ts">
 definePageMeta({
-  layout: false
+  layout: false,
 })
-
+const id = useId()
 const router = useRouter()
 
 const components = [
-  "style-provider",
-  "button",
-  "fab",
-  "breadcrumbs",
-  "link",
-  "cell",
-  "icon",
-  "image",
-  "avatar",
-  "loading",
-  "chip",
-  "badge",
-  "ellipsis",
-  "paper",
-  "elevation",
-  "skeleton",
-  "collapse",
-  "collapse-transition",
-  "space",
-  "layout",
-  "sticky",
-  "progress",
-  "list",
-  "swipe",
-  "steps",
-  "image-preview",
-  "card",
-  "result",
-  "divider",
-  "table",
-  "watermark",
-  "tabs",
-  "index-bar",
-  "app-bar",
-  "bottom-navigation",
-  "ripple",
-  "lazy",
-  "hover",
-  "drag",
-  "snackbar",
-  "action-sheet",
-  "floating-panel",
-  "dialog",
-  "pull-refresh",
-  "overlay",
-  "popup",
-  "pagination",
-  "menu",
-  "menu-select",
-  "tooltip",
-  "back-top",
-  "loading-bar",
-  "countdown",
-  "picker",
-  "date-picker",
-  "time-picker",
-  "form",
-  "input",
-  "select",
-  "radio",
-  "checkbox",
-  "counter",
-  "switch",
-  "slider",
-  "rate",
-  "uploader"
+  'style-provider',
+  'button',
+  'fab',
+  'breadcrumbs',
+  'link',
+  'cell',
+  'icon',
+  'image',
+  'avatar',
+  'loading',
+  'chip',
+  'badge',
+  'ellipsis',
+  'paper',
+  'elevation',
+  'skeleton',
+  'collapse',
+  'collapse-transition',
+  'space',
+  'layout',
+  'sticky',
+  'progress',
+  'list',
+  'swipe',
+  'steps',
+  'image-preview',
+  'card',
+  'result',
+  'divider',
+  'table',
+  'watermark',
+  'tabs',
+  'index-bar',
+  'app-bar',
+  'bottom-navigation',
+  'ripple',
+  'lazy',
+  'hover',
+  'drag',
+  'snackbar',
+  'action-sheet',
+  'floating-panel',
+  'dialog',
+  'pull-refresh',
+  'overlay',
+  'popup',
+  'pagination',
+  'menu',
+  'menu-select',
+  'tooltip',
+  'back-top',
+  'loading-bar',
+  'countdown',
+  'picker',
+  'date-picker',
+  'time-picker',
+  'form',
+  'input',
+  'select',
+  'radio',
+  'checkbox',
+  'counter',
+  'switch',
+  'slider',
+  'rate',
+  'uploader',
 ]
 
 function onNavigationTo(routeName: string) {
@@ -80,13 +80,20 @@ function onNavigationTo(routeName: string) {
 </script>
 
 <template>
-  <var-app-bar title="首页" />
-  <var-cell v-for="item in components" :key="item" ripple icon="fire" @click="onNavigationTo(item)">
-    {{ item }}
-    <template #extra>
-      <var-icon name="information" />
-    </template>
-  </var-cell>
+  <div>
+    <myinput />
+    <div :id="id">
+      test
+    </div>
+    <var-input />
+    <var-app-bar title="首页" />
+    <var-cell v-for="item in components" :key="item" ripple icon="fire" @click="onNavigationTo(item)">
+      {{ item }}
+      <template #extra>
+        <var-icon name="information" />
+      </template>
+    </var-cell>
+  </div>
 </template>
 
 <style>
