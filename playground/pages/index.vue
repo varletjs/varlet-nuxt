@@ -85,6 +85,11 @@ function onNavigationTo(routeName: string) {
     <div :id="id">
       test
     </div>
+
+    <var-icon namespace="i" name="account-circle" />
+    <i class="i i-account-circle" />
+    <var-icon namespace="i" name="account-circle" />
+
     <var-input />
     <var-app-bar title="首页" />
     <var-cell v-for="item in components" :key="item" ripple icon="fire" @click="onNavigationTo(item)">
@@ -97,6 +102,7 @@ function onNavigationTo(routeName: string) {
 </template>
 
 <style>
+  @import '../assets/virtual.icons.css';
 .ripple-example-block {
   display: flex;
   justify-content: center;
