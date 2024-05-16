@@ -5,6 +5,9 @@ import { createUnplugin } from 'unplugin'
 import MagicString from 'magic-string'
 import { genImport } from 'knitwork'
 
+import iconBuilderVite from '@varlet/unplugin-icon-builder/vite'
+import iconBuilderWebpack from '@varlet/unplugin-icon-builder/webpack'
+
 import type { ModuleOptions } from './types'
 import { directives, excludeFolders, functional, moduleName, nameSpace } from './config'
 import { genStylePath, pascalCase } from './utils'
@@ -103,14 +106,24 @@ export default defineNuxtModule<ModuleOptions>({
       ({ name, from: `${moduleName}` }),
     ))
 
+    const plugins = {
+      vite: [transformPathPlugin.vite(_options), iconBuilderVite(_options?.icon)],
+      webpack: [transformPathPlugin.webpack(_options), iconBuilderWebpack(_options?.icon)],
+    }
+
+    if (!_options?.icon) {
+      plugins.vite.pop()
+      plugins.webpack.pop()
+    }
+
     nuxt.hook('vite:extendConfig', (config) => {
       config.plugins = config.plugins || []
-      config.plugins.push(transformPathPlugin.vite(_options))
+      config.plugins.push(...plugins.vite)
     })
 
     nuxt.hook('webpack:config', (configs) => {
       configs.forEach((config) => {
-        config.plugins.push(transformPathPlugin.webpack(_options))
+        config.plugins.push(...plugins.webpack)
       })
     })
   },

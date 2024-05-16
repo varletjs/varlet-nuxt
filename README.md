@@ -45,6 +45,7 @@ tips: If you running `varlet` on the PC. Please install [`@varlet/touch-emulator
 |--|--|--|--|
 |modulePath|false|undefind|customer you workspace path if you want|
 |exclude|false|'.nuxt', 'node_modules'|exclude some path that you won't transform|
+|icon|false| undefined | [svg icon to iconfont](https://github.com/varletjs/varlet-iconx/tree/main/packages/varlet-unplugin-icon-builder) |
 
 ## Contribution
 
