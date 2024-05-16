@@ -26,12 +26,15 @@ npx nuxi@latest module add varlet
 ```js
 export default defineNuxtConfig({
   modules: [
-    '@varlet/nuxt'
+    [
+      '@varlet/nuxt',
+      {
+        modulePath: '...',
+        exclude: ['...'],
+        icons: {}
+      }
+    ]
   ],
-  varlet: {
-    modulePath: '...',
-    exclude: ['...']
-  },
 })
 ```
 
@@ -41,11 +44,11 @@ tips: If you running `varlet` on the PC. Please install [`@varlet/touch-emulator
 
 ### Options
 
-|fieldName|require|default|effect|
-|--|--|--|--|
-|modulePath|false|undefind|customer you workspace path if you want|
-|exclude|false|'.nuxt', 'node_modules'|exclude some path that you won't transform|
-|icon|false| undefined | [svg icon to iconfont](https://github.com/varletjs/varlet-iconx/tree/main/packages/varlet-unplugin-icon-builder) |
+| fieldName  | require | default                 | effect                                                                                                           |
+| ---------- | ------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| modulePath | false   | undefind                | customer you workspace path if you want                                                                          |
+| exclude    | false   | '.nuxt', 'node_modules' | exclude some path that you won't transform                                                                       |
+| icon       | false   | undefined               | [svg icon to iconfont](https://github.com/varletjs/varlet-iconx/tree/main/packages/varlet-unplugin-icon-builder) |
 
 ## Contribution
 
