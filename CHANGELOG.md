@@ -1,4 +1,31 @@
 
+## v0.1.3
+
+[compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.1.2...v0.1.3)
+
+
+### 🚀 Enhancements
+
+  - Integration varlet icon builder ([9313325](https://github.com/varletjs/varlet-nuxt/commit/9313325))
+  - Update the meta configKey & playground config ([0f96570](https://github.com/varletjs/varlet-nuxt/commit/0f96570))
+
+### 📖 Documentation
+
+  - Declare the parameter passing method ([#19](https://github.com/varletjs/varlet-nuxt/pull/19))
+
+### 🏡 Chore
+
+  - Remove unuse import ([98b4a3b](https://github.com/varletjs/varlet-nuxt/commit/98b4a3b))
+
+### ✅ Tests
+
+  - 增加关于`@varlet/unplugin-icon-builder`的测试 ([#18](https://github.com/varletjs/varlet-nuxt/pull/18))
+
+### ❤️  Contributors
+
+- 阿菜 Cai ([@RSS1102](http://github.com/RSS1102))
+- Zhangmo8 ([@zhangmo8](http://github.com/zhangmo8))
+
 ## v0.1.2
 
 [compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.1.1...v0.1.2)
