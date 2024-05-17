@@ -12,8 +12,8 @@ dependencies:
     specifier: latest
     version: 3.2.4(vue@3.4.21)
   '@varlet/unplugin-icon-builder':
-    specifier: ^0.2.4
-    version: 0.2.4(rollup@3.29.4)(vite@5.1.5)(vue@3.4.21)
+    specifier: ^0.2.5
+    version: 0.2.5(rollup@3.29.4)(vite@5.1.5)(vue@3.4.21)
   knitwork:
     specifier: ^1.0.0
     version: 1.0.0
@@ -1745,6 +1745,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
+      napi-wasm: 1.1.0
     dev: true
     bundledDependencies:
       - napi-wasm
@@ -2777,8 +2778,8 @@ packages:
       - debug
     dev: false
 
-  /@varlet/icon-builder@0.2.4(vue@3.4.21):
-    resolution: {integrity: sha512-ztAb6gtgZIDVBEu9ECAEOktX2hGYOFCbwgjPs/x94HXMCTY+2lgieHuWXHkgRdgB3RN//0Olz0wJLGWZ10dDRw==}
+  /@varlet/icon-builder@0.2.5(vue@3.4.21):
+    resolution: {integrity: sha512-Pea8DuA7KZL+MMyKhxEiOryZDINxpksuUQ82vdZlq4ke6NyxE5moiX5va+3IQUh5dojZB3/mY226HB+UGvb50A==}
     hasBin: true
     dependencies:
       '@varlet/axle': 0.7.1(vue@3.4.21)
@@ -2824,8 +2825,8 @@ packages:
       vue: 3.4.21(typescript@4.9.5)
     dev: false
 
-  /@varlet/unplugin-icon-builder@0.2.4(rollup@3.29.4)(vite@5.1.5)(vue@3.4.21):
-    resolution: {integrity: sha512-sd5Bks9HwQLIXd4vHaafUvIwflhowZ7rltFhCC4VJjTqaIwA1BxrA9Cuf58OapAHeUWULpcpK6Xj3P8ojkXTQg==}
+  /@varlet/unplugin-icon-builder@0.2.5(rollup@3.29.4)(vite@5.1.5)(vue@3.4.21):
+    resolution: {integrity: sha512-7WcJ+sHQPtTLKfDnMXPmv1fnG7DrBnZzWIWUs96PFZtYZqLW9I1ioOILYPau59I5mBfTepFSPjt1JJKKD6TfBw==}
     peerDependencies:
       rollup: ^3
       vite: '>=3'
@@ -2836,7 +2837,7 @@ packages:
       webpack:
         optional: true
     dependencies:
-      '@varlet/icon-builder': 0.2.4(vue@3.4.21)
+      '@varlet/icon-builder': 0.2.5(vue@3.4.21)
       chokidar: 3.6.0
       fs-extra: 11.2.0
       rollup: 3.29.4
@@ -6928,6 +6929,10 @@ packages:
     resolution: {integrity: sha512-7ZtY5KTCNheRGfEFxnedV5zFiORN1+Y1N6zvPTnHQd8ENUvfaDBeuJDZb2bN/oXwXxu3qkTXDzy57W5vAmDTBw==}
     engines: {node: ^14 || ^16 || >=18}
     hasBin: true
+    dev: true
+
+  /napi-wasm@1.1.0:
+    resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
     dev: true
 
   /natural-compare-lite@1.4.0:
