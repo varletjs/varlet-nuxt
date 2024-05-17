@@ -25,16 +25,12 @@ npx nuxi@latest module add varlet
 
 ```js
 export default defineNuxtConfig({
-  modules: [
-    [
-      '@varlet/nuxt',
-      {
-        modulePath: '...',
-        exclude: ['...'],
-        icons: {}
-      }
-    ]
-  ],
+  modules: ['@varlet/nuxt'],
+  varlet: {
+    modulePath: '...',
+    exclude: ['...'],
+    icons: {...}
+  }
 })
 ```
 
