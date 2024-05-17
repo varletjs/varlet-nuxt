@@ -5,13 +5,11 @@ import varlet from '..'
 const svgIconsDir = path.resolve(__dirname, './assets/svg-icons')
 
 export default defineNuxtConfig({
-  modules: [[
-    varlet,
-    {
-      icon: {
-        dir: svgIconsDir,
-        generatedFilename: './playground/assets/virtual.icons.css',
-      },
+  modules: [varlet],
+  varlet: {
+    icon: {
+      dir: svgIconsDir,
+      generatedFilename: './playground/assets/virtual.icons.css',
     },
-  ]],
+  },
 })
