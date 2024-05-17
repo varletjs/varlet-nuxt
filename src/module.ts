@@ -82,7 +82,7 @@ const transformPathPlugin = createUnplugin<ModuleOptions>((pluginOptions) => {
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: moduleName,
-    configKey: moduleName,
+    configKey: 'varlet',
   },
   setup(_options: ModuleOptions, nuxt: Nuxt) {
     nuxt.options.build.transpile.push(moduleName)
