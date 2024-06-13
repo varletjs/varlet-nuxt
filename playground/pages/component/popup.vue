@@ -36,7 +36,7 @@ const right = ref(false)
     </div>
   </var-popup>
 
-  <var-popup position="bottom" v-model:show="bottom">
+  <var-popup v-model:show="bottom" position="bottom">
     <div class="popup-example-block">
       素胚勾勒出青花笔锋浓转淡,
       瓶身描绘的牡丹一如你初妆,
@@ -45,7 +45,7 @@ const right = ref(false)
     </div>
   </var-popup>
 
-  <var-popup position="top" v-model:show="top">
+  <var-popup v-model:show="top" position="top">
     <div class="popup-example-block">
       素胚勾勒出青花笔锋浓转淡,
       瓶身描绘的牡丹一如你初妆,
@@ -54,7 +54,7 @@ const right = ref(false)
     </div>
   </var-popup>
 
-  <var-popup position="left" v-model:show="left">
+  <var-popup v-model:show="left" position="left">
     <div class="popup-example-block">
       素胚勾勒出青花笔锋浓转淡,
       瓶身描绘的牡丹一如你初妆,
@@ -63,7 +63,7 @@ const right = ref(false)
     </div>
   </var-popup>
 
-  <var-popup position="right" v-model:show="right">
+  <var-popup v-model:show="right" position="right">
     <div class="popup-example-block">
       素胚勾勒出青花笔锋浓转淡,
       瓶身描绘的牡丹一如你初妆,

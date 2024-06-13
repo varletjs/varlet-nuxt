@@ -17,13 +17,15 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.clearInterval(timer)
-})  
+})
 </script>
 
 <template>
   <var-space direction="column" :size="[12, 12]">
     <var-progress :value="20" />
     <var-progress :value="value" :track="false" label />
-    <var-progress :value="100" label>success</var-progress>
+    <var-progress :value="100" label>
+      success
+    </var-progress>
   </var-space>
 </template>

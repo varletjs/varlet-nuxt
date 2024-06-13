@@ -1,22 +1,34 @@
 <template>
   <var-row :gutter="[10, 10]">
     <var-col :span="8">
-      <div class="item">span: 8</div>
+      <div class="item">
+        span: 8
+      </div>
     </var-col>
     <var-col :span="8">
-      <div class="item">span: 8</div>
+      <div class="item">
+        span: 8
+      </div>
     </var-col>
     <var-col :span="8">
-      <div class="item">span: 8</div>
+      <div class="item">
+        span: 8
+      </div>
     </var-col>
     <var-col :span="8">
-      <div class="item">span: 8</div>
+      <div class="item">
+        span: 8
+      </div>
     </var-col>
     <var-col :span="8">
-      <div class="item">span: 8</div>
+      <div class="item">
+        span: 8
+      </div>
     </var-col>
     <var-col :span="8">
-      <div class="item">span: 8</div>
+      <div class="item">
+        span: 8
+      </div>
     </var-col>
   </var-row>
 </template>

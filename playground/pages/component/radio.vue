@@ -5,7 +5,7 @@ const value = ref(false)
 </script>
 
 <template>
-  <var-radio unchecked-color="var(--color-warning)" checked-color="var(--color-danger)" v-model="value">
+  <var-radio v-model="value" unchecked-color="var(--color-warning)" checked-color="var(--color-danger)">
     <template #unchecked-icon>
       <var-icon name="heart-half-full" size="24px" />
     </template>

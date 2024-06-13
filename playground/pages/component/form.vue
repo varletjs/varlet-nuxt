@@ -12,7 +12,7 @@ const formData = reactive({
   group: [],
   score: 0,
   like: [],
-  files: []
+  files: [],
 })
 const form = ref(null)
 const disabled = ref(false)
@@ -22,32 +22,42 @@ const readonly = ref(false)
 <template>
   <var-form ref="form" :disabled="disabled" :readonly="readonly" scroll-to-error="start">
     <var-space direction="column" :size="[14, 0]">
-      <var-input placeholder="请输入用户名" :rules="[v => !!v || '用户名不能为空']" v-model="formData.username" />
-      <var-input type="password" placeholder="请输入密码" :rules="[v => !!v || '密码不能为空']" v-model="formData.password" />
-      <var-select placeholder="请选择部门" :rules="[v => !!v || '必须选一个部门']" v-model="formData.department">
+      <var-input v-model="formData.username" placeholder="请输入用户名" :rules="[v => !!v || '用户名不能为空']" />
+      <var-input v-model="formData.password" type="password" placeholder="请输入密码" :rules="[v => !!v || '密码不能为空']" />
+      <var-select v-model="formData.department" placeholder="请选择部门" :rules="[v => !!v || '必须选一个部门']">
         <var-option label="吃饭部" />
         <var-option label="睡觉部" />
         <var-option label="打游戏部" />
       </var-select>
-      <var-select multiple placeholder="请选择组织" :rules="[v => v.length >= 1 || '至少选择一个组织']" v-model="formData.group">
+      <var-select v-model="formData.group" multiple placeholder="请选择组织" :rules="[v => v.length >= 1 || '至少选择一个组织']">
         <var-option label="吃饭组" />
         <var-option label="睡觉组" />
         <var-option label="打游戏组" />
       </var-select>
-      <var-radio-group :rules="[v => !!v || '必须选择一个性别']" v-model="formData.gender">
-        <var-radio :checked-value="1">男</var-radio>
-        <var-radio :checked-value="2">女</var-radio>
+      <var-radio-group v-model="formData.gender" :rules="[v => !!v || '必须选择一个性别']">
+        <var-radio :checked-value="1">
+          男
+        </var-radio>
+        <var-radio :checked-value="2">
+          女
+        </var-radio>
       </var-radio-group>
-      <var-checkbox-group :rules="[v => v.length > 0 || '至少选择一个爱好']" v-model="formData.like">
-        <var-checkbox :checked-value="1">吃饭</var-checkbox>
-        <var-checkbox :checked-value="2">睡觉</var-checkbox>
-        <var-checkbox :checked-value="3">打游戏</var-checkbox>
+      <var-checkbox-group v-model="formData.like" :rules="[v => v.length > 0 || '至少选择一个爱好']">
+        <var-checkbox :checked-value="1">
+          吃饭
+        </var-checkbox>
+        <var-checkbox :checked-value="2">
+          睡觉
+        </var-checkbox>
+        <var-checkbox :checked-value="3">
+          打游戏
+        </var-checkbox>
       </var-checkbox-group>
-      <var-rate :rules="[v => v >= 3 || '必须大于2']" v-model="formData.score" />
-      <var-switch :rules="[v => !!v || '您必须开启']" v-model="formData.license" />
-      <var-counter :rules="[v => v > 10 || '必须大于10']" v-model="formData.count" />
-      <var-slider :rules="[v => v > 10 || '必须大于10']" v-model="formData.range" />
-      <var-uploader :rules="[v => v.length >= 1 || '至少上传一张图片']" v-model="formData.files" />
+      <var-rate v-model="formData.score" :rules="[v => v >= 3 || '必须大于2']" />
+      <var-switch v-model="formData.license" :rules="[v => !!v || '您必须开启']" />
+      <var-counter v-model="formData.count" :rules="[v => v > 10 || '必须大于10']" />
+      <var-slider v-model="formData.range" :rules="[v => v > 10 || '必须大于10']" />
+      <var-uploader v-model="formData.files" :rules="[v => v.length >= 1 || '至少上传一张图片']" />
 
       <var-space direction="column" :size="[14, 0]">
         <var-button block type="danger" @click="form.reset()">

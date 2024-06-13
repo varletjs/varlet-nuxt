@@ -3,7 +3,7 @@ import { ref } from 'vue'
 
 const list = ref(gen(1, 10))
 
-function gen (current, size) {
+function gen(current, size) {
   return Array.from({ length: size }).map((_, index) => {
     const id = (current - 1) * size + index + 1
 
@@ -15,7 +15,7 @@ function gen (current, size) {
   })
 }
 
-function get (current, size) {
+function get(current, size) {
   list.value = gen(current, size)
 }
 </script>

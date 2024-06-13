@@ -15,7 +15,7 @@ const successTheme = {
 
 const styleVars = ref(null)
 
-function toggleTheme () {
+function toggleTheme() {
   styleVars.value = styleVars.value ? null : successTheme
 }
 </script>

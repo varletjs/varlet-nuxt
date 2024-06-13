@@ -1,5 +1,7 @@
 <template>
-  <div class="ripple-example-block var-elevation--2" v-ripple>点击</div>
+  <div v-ripple class="ripple-example-block var-elevation--2">
+    点击
+  </div>
 </template>
 
 <style>

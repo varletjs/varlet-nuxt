@@ -4,7 +4,7 @@ import '@varlet/ui/es/styles/elevation.css'
 
 <template>
   <var-space class="elevation-example-list" :size="[40, 0]" justify="space-between">
-    <div class="elevation-example-item" :class="`var-elevation--${e - 1}`" v-for="e in 25" :key="e">
+    <div v-for="e in 25" :key="e" class="elevation-example-item" :class="`var-elevation--${e - 1}`">
       {{ e - 1 }}
     </div>
   </var-space>

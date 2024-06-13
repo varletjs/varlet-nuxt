@@ -5,8 +5,10 @@ const active = ref(0)
 </script>
 
 <template>
-  <var-app-bar round image="https://varlet.gitee.io/varlet-ui/tree.jpeg"
-    image-linear-gradient="to right top, rgba(29, 68, 147, 0.5) 0%, rgba(74, 198, 170, 0.9) 100%">
+  <var-app-bar
+    round image="https://varlet.gitee.io/varlet-ui/tree.jpeg"
+    image-linear-gradient="to right top, rgba(29, 68, 147, 0.5) 0%, rgba(74, 198, 170, 0.9) 100%"
+  >
     标题
     <template #left>
       <var-button round text color="transparent" text-color="#fff">
@@ -27,8 +29,10 @@ const active = ref(0)
     </template>
 
     <template #content>
-      <var-tabs style="margin-top: 100px" color="transparent" active-color="#fff" inactive-color="#ddd"
-        v-model:active="active">
+      <var-tabs
+        v-model:active="active" style="margin-top: 100px" color="transparent" active-color="#fff"
+        inactive-color="#ddd"
+      >
         <var-tab>选项卡</var-tab>
         <var-tab>选项卡</var-tab>
         <var-tab>选项卡</var-tab>

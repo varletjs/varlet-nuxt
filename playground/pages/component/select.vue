@@ -18,28 +18,30 @@ const value13 = ref()
 
 <template>
   <var-space direction="column" size="large">
-    <var-select placeholder="请选择一个选项" v-model="value">
+    <var-select v-model="value" placeholder="请选择一个选项">
       <var-option label="吃饭" />
       <var-option label="睡觉" />
     </var-select>
-    <var-select placeholder="文本关联值" v-model="value2">
+    <var-select v-model="value2" placeholder="文本关联值">
       <var-option label="吃饭" :value="1" />
       <var-option label="睡觉" :value="2" />
     </var-select>
-    <div class="relation">当前选择的是: {{ value2 }}</div>
-    <var-select placeholder="只读" readonly v-model="value3">
+    <div class="relation">
+      当前选择的是: {{ value2 }}
+    </div>
+    <var-select v-model="value3" placeholder="只读" readonly>
       <var-option label="吃饭" />
       <var-option label="睡觉" />
     </var-select>
-    <var-select placeholder="禁用" disabled v-model="value4">
+    <var-select v-model="value4" placeholder="禁用" disabled>
       <var-option label="吃饭" />
       <var-option label="睡觉" />
     </var-select>
-    <var-select placeholder="可清除" clearable v-model="value5">
+    <var-select v-model="value5" placeholder="可清除" clearable>
       <var-option label="吃饭" />
       <var-option label="睡觉" />
     </var-select>
-    <var-select placeholder="使用插槽自定义清除图标" clearable v-model="value6">
+    <var-select v-model="value6" placeholder="使用插槽自定义清除图标" clearable>
       <var-option label="吃饭" />
       <var-option label="睡觉" />
       <template #clear-icon="{ clear }">
@@ -47,7 +49,7 @@ const value13 = ref()
       </template>
     </var-select>
 
-    <var-select placeholder="自定义图标" v-model="value7">
+    <var-select v-model="value7" placeholder="自定义图标">
       <template #default>
         <var-option label="吃饭">
           <var-icon class="selected-icon" name="cake-variant" />
@@ -73,7 +75,7 @@ const value13 = ref()
       </template>
     </var-select>
 
-    <var-select placeholder="自定义图标尺寸" v-model="value8">
+    <var-select v-model="value8" placeholder="自定义图标尺寸">
       <template #default>
         <var-option label="吃饭">
           <var-icon class="selected-icon" name="cake-variant" />
@@ -99,30 +101,30 @@ const value13 = ref()
       </template>
     </var-select>
 
-    <var-select placeholder="多选" multiple v-model="value9">
+    <var-select v-model="value9" placeholder="多选" multiple>
       <var-option label="吃饭" />
       <var-option label="睡觉" />
       <var-option label="打游戏" />
       <var-option label="写代码" />
     </var-select>
-    <var-select placeholder="纸片风格的多选" chip multiple v-model="value10">
+    <var-select v-model="value10" placeholder="纸片风格的多选" chip multiple>
       <var-option label="吃饭" />
       <var-option label="睡觉" />
       <var-option label="打游戏" />
       <var-option label="写代码" />
     </var-select>
-    <var-select placeholder="单选值校验" :rules="[(v) => v === '摸鱼' || '您一定得选择摸鱼']" v-model="value11">
+    <var-select v-model="value11" placeholder="单选值校验" :rules="[(v) => v === '摸鱼' || '您一定得选择摸鱼']">
       <var-option label="吃饭" />
       <var-option label="睡觉" />
       <var-option label="摸鱼" />
     </var-select>
-    <var-select multiple placeholder="多选值校验" :rules="[(v) => v.length >= 2 || '您至少选择两个选项']" v-model="value12">
+    <var-select v-model="value12" multiple placeholder="多选值校验" :rules="[(v) => v.length >= 2 || '您至少选择两个选项']">
       <var-option label="吃饭" />
       <var-option label="睡觉" />
       <var-option label="打游戏" />
       <var-option label="写代码" />
     </var-select>
-    <var-select placeholder="小尺寸" v-model="value13">
+    <var-select v-model="value13" placeholder="小尺寸">
       <var-option label="吃饭" />
       <var-option label="睡觉" />
     </var-select>

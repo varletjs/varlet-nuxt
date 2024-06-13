@@ -6,7 +6,9 @@ const value = ref()
 
 <template>
   <var-menu-select v-model="value">
-    <var-button type="primary">{{ value ? value : '请选择' }}</var-button>
+    <var-button type="primary">
+      {{ value ? value : '请选择' }}
+    </var-button>
 
     <template #options>
       <var-menu-option label="吃饭" />

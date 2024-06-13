@@ -7,7 +7,7 @@ export function genStylePath(dirName: string) {
 
 export function pascalCase(str: string): string {
   return str
-    .split(/[^a-zA-Z0-9]/)
+    .split(/[^a-z0-9]/i)
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join('')
 }

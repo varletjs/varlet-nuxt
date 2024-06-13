@@ -3,15 +3,17 @@ import { ref } from 'vue'
 
 const translateY = ref('100%')
 
-function handleHover (hovering) {
+function handleHover(hovering) {
   translateY.value = hovering ? '0' : '100%'
 }
 </script>
 
 <template>
-  <div class="image-container" v-hover="handleHover">
+  <div v-hover="handleHover" class="image-container">
     <var-image src="https://varlet.gitee.io/varlet-ui/tree.jpeg" />
-    <div class="image-mask" :style="{ transform: `translateY(${translateY})` }">HOVER</div>
+    <div class="image-mask" :style="{ transform: `translateY(${translateY})` }">
+      HOVER
+    </div>
   </div>
 </template>
 

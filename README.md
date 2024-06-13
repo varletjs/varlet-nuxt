@@ -29,7 +29,7 @@ export default defineNuxtConfig({
   varlet: {
     modulePath: '...',
     exclude: ['...'],
-    icon: {...}
+    icon: {}
   }
 })
 ```

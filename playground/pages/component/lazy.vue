@@ -1,5 +1,5 @@
 <template>
-  <img class="lazy-example-cat" v-lazy="'https://varlet.gitee.io/varlet-ui/cat.jpg'">
+  <img v-lazy="'https://varlet.gitee.io/varlet-ui/cat.jpg'" class="lazy-example-cat">
 </template>
 
 <style>

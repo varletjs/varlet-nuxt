@@ -12,7 +12,7 @@ import type { ModuleOptions } from './types'
 import { directives, excludeFolders, functional, moduleName, nameSpace } from './config'
 import { genStylePath, pascalCase } from './utils'
 
-const componentReg = /_component_(v|V)ar([A-z]|_)+ /g
+const componentReg = /_component_(v|V)ar([A-z])+ /g
 const functionComponentReg = new RegExp(functional.join('|'), 'g')
 
 const directiveReg = new RegExp(`_resolveDirective\\(\\"(${directives.join('|')})\\"\\)`, 'g')
@@ -106,24 +106,14 @@ export default defineNuxtModule<ModuleOptions>({
       ({ name, from: `${moduleName}` }),
     ))
 
-    const plugins = {
-      vite: [transformPathPlugin.vite(_options), iconBuilderVite(_options?.icon)],
-      webpack: [transformPathPlugin.webpack(_options), iconBuilderWebpack(_options?.icon)],
-    }
-
-    if (!_options?.icon) {
-      plugins.vite.pop()
-      plugins.webpack.pop()
-    }
-
     nuxt.hook('vite:extendConfig', (config) => {
       config.plugins = config.plugins || []
-      config.plugins.push(...plugins.vite)
+      config.plugins.push(transformPathPlugin.vite(_options), iconBuilderVite(_options?.icon || {}))
     })
 
     nuxt.hook('webpack:config', (configs) => {
       configs.forEach((config) => {
-        config.plugins.push(...plugins.webpack)
+        config.plugins.push(transformPathPlugin.webpack(_options), iconBuilderWebpack(_options?.icon || {}))
       })
     })
   },

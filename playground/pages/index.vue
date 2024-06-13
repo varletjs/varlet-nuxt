@@ -2,6 +2,11 @@
 definePageMeta({
   layout: false,
 })
+
+onMounted(() => {
+  Locale.add('en-US', Locale.enUS)
+})
+
 const id = useId()
 const router = useRouter()
 

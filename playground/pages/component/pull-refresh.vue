@@ -6,7 +6,7 @@ const data2 = Array(30).fill('This is new List Item')
 const isRefresh = ref(false)
 const data = ref(data1)
 
-function refresh () {
+function refresh() {
   setTimeout(() => {
     data.value = data.value[0] === 'List Item' ? data2 : data1
     isRefresh.value = false
@@ -17,7 +17,7 @@ function refresh () {
 <template>
   <var-pull-refresh v-model="isRefresh" @refresh="refresh">
     <var-cell v-for="(item, index) in data" :key="index" border>
-      {{ `${item  } ${  index + 1}` }}
+      {{ `${item} ${index + 1}` }}
     </var-cell>
   </var-pull-refresh>
 </template>

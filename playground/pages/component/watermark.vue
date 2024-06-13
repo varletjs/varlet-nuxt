@@ -1,6 +1,6 @@
 <template>
   <var-watermark content="Varlet">
-    <div class="watermark-wrapper"></div>
+    <div class="watermark-wrapper" />
   </var-watermark>
 </template>
 

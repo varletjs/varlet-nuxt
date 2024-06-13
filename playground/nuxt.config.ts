@@ -1,11 +1,11 @@
-import path from 'node:path'
+import { resolve } from 'node:path'
 import { defineNuxtConfig } from 'nuxt/config'
-import varlet from '..'
+import varletModules from '..'
 
-const svgIconsDir = path.resolve(__dirname, './assets/svg-icons')
+const svgIconsDir = resolve(__dirname, './assets/svg-icons')
 
 export default defineNuxtConfig({
-  modules: [varlet],
+  modules: [varletModules],
   varlet: {
     icon: {
       dir: svgIconsDir,
