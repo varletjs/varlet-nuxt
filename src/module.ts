@@ -12,7 +12,7 @@ import type { ModuleOptions } from './types'
 import { directives, excludeFolders, functional, moduleName, nameSpace } from './config'
 import { genStylePath, pascalCase } from './utils'
 
-const componentReg = /_component_(v|V)ar([A-z])+ /g
+const componentReg = /_component_(v|V)ar([A-Za-z])+ /g
 const functionComponentReg = new RegExp(functional.join('|'), 'g')
 
 const directiveReg = new RegExp(`_resolveDirective\\(\\"(${directives.join('|')})\\"\\)`, 'g')
@@ -108,12 +108,12 @@ export default defineNuxtModule<ModuleOptions>({
 
     nuxt.hook('vite:extendConfig', (config) => {
       config.plugins = config.plugins || []
-      config.plugins.push(transformPathPlugin.vite(_options), iconBuilderVite(_options?.icon || {}))
+      config.plugins.push(transformPathPlugin.vite(_options), _options?.icon && iconBuilderVite(_options?.icon))
     })
 
     nuxt.hook('webpack:config', (configs) => {
       configs.forEach((config) => {
-        config.plugins.push(transformPathPlugin.webpack(_options), iconBuilderWebpack(_options?.icon || {}))
+        config.plugins.push(transformPathPlugin.webpack(_options), _options?.icon && iconBuilderWebpack(_options?.icon))
       })
     })
   },

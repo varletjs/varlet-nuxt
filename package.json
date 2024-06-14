@@ -43,8 +43,8 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.12.1",
-    "@varlet/ui": "^3.2.15-alpha.1718198850293",
-    "@varlet/unplugin-icon-builder": "^0.2.27",
+    "@varlet/ui": "3.3.0",
+    "@varlet/unplugin-icon-builder": "^0.2.28",
     "knitwork": "^1.1.0",
     "magic-string": "^0.30.10",
     "unplugin": "^1.10.1"
