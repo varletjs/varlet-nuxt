@@ -1,4 +1,23 @@
 
+## v0.1.4
+
+[compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.1.3...v0.1.4)
+
+### 🩹 Fixes
+
+- When the option icon is undefined then filter the icon plugin ([1881d42](https://github.com/varletjs/varlet-nuxt/commit/1881d42))
+
+### 🏡 Chore
+
+- Updated to the final patch ([#21](https://github.com/varletjs/varlet-nuxt/pull/21))
+- Upgrade dependency ([6e87eb7](https://github.com/varletjs/varlet-nuxt/commit/6e87eb7))
+- Upgrade dependency to supports locale provider ([89bed3f](https://github.com/varletjs/varlet-nuxt/commit/89bed3f))
+
+### ❤️ Contributors
+
+- Zhangmo8 ([@zhangmo8](http://github.com/zhangmo8))
+- 阿菜 Cai ([@RSS1102](http://github.com/RSS1102))
+
 ## v0.1.4-1718250695.6e87eb7
 
 [compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.1.3...v0.1.4-1718250695.6e87eb7)
