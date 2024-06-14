@@ -1,4 +1,17 @@
 
+## v0.1.5
+
+[compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.1.4...v0.1.5)
+
+### 🩹 Fixes
+
+- Regexp fixed ([0b27f92](https://github.com/varletjs/varlet-nuxt/commit/0b27f92))
+- Regexp fixed ([87d6d5c](https://github.com/varletjs/varlet-nuxt/commit/87d6d5c))
+
+### ❤️ Contributors
+
+- Zhangmo8 ([@zhangmo8](http://github.com/zhangmo8))
+
 ## v0.1.4
 
 [compare changes](https://github.com/varletjs/varlet-nuxt/compare/v0.1.3...v0.1.4)
