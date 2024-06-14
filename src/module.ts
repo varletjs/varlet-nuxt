@@ -12,7 +12,7 @@ import type { ModuleOptions } from './types'
 import { directives, excludeFolders, functional, moduleName, nameSpace } from './config'
 import { genStylePath, pascalCase } from './utils'
 
-const componentReg = /_component_(v|V)ar([A-Za-z])+ /g
+const componentReg = /_component_(v|V)ar([A-z])+ /g
 const functionComponentReg = new RegExp(functional.join('|'), 'g')
 
 const directiveReg = new RegExp(`_resolveDirective\\(\\"(${directives.join('|')})\\"\\)`, 'g')
